@@ -1,6 +1,6 @@
-package com.brewery.mssc_brewery.services;
+package com.brewery.fuzzy_couscous.services;
 
-import com.brewery.mssc_brewery.web.model.BeerDto;
+import com.brewery.fuzzy_couscous.web.model.BeerDto;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 

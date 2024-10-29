@@ -1,4 +1,4 @@
-package com.brewery.mssc_brewery.web.model;
+package com.brewery.fuzzy_couscous.web.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

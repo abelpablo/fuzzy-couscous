@@ -1,9 +1,8 @@
-package com.brewery.mssc_brewery.web.controller;
+package com.brewery.fuzzy_couscous.web.controller;
 
 
-import com.brewery.mssc_brewery.web.model.BeerDto;
-import com.brewery.mssc_brewery.services.BeerService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.brewery.fuzzy_couscous.web.model.BeerDto;
+import com.brewery.fuzzy_couscous.services.BeerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package com.brewery.mssc_brewery;
+package com.brewery.fuzzy_couscous;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

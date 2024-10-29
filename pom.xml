@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.brewery</groupId>
-	<artifactId>mssc-brewery</artifactId>
+	<artifactId>fuzzy-couscous</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>mssc-brewery</name>
 	<description>Microseervices Brewery</description>

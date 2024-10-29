@@ -1,13 +1,13 @@
-package com.brewery.mssc_brewery;
+package com.brewery.fuzzy_couscous;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MsscBreweryApplication {
+public class FuzzyCouscousApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsscBreweryApplication.class, args);
+		SpringApplication.run(FuzzyCouscousApplication.class, args);
 	}
 
 }
