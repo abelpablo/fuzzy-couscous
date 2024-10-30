@@ -16,4 +16,5 @@ public class BeerDto {
     private String beerName;
     private String beerStyle;
     private Long upc;
+
 }
