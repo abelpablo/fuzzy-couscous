@@ -91,3 +91,6 @@ Dockerfile
 # Archivos de caché de Lombok
 .lombok/
 
+# Archivos de terraform
+*.tfvars
+*.tf
