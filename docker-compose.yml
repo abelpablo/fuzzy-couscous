@@ -1,0 +1,30 @@
+version: '3.8'  # Or another version you are using
+
+services:
+  web:
+    container_name: 'springapp'
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOST=db
+      - DB_NAME=${DB_NAME}
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15  # Or another version you are using
+    container_name: 'db'
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
