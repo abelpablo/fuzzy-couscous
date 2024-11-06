@@ -67,12 +67,18 @@ resource "null_resource" "dokku_install_and_setup_firewall" {
       "ufw reload"          # Reload UFW to apply changes
     ]
   }
+# Upload environment variables file to the instance
+provisioner "file" {
+source      = "./.env.prod"  # Path to your local .env.prod file
+destination = "/tmp/.env.prod"  # Destination path on the instanc
+}
 
-  # Configure Dokku and set environment variables
+# Configure Dokku and set environment variables
   provisioner "remote-exec" {
     inline = [
-      "dokku apps:create beerapp", #Pablo
-      "dokku ports:add beerapp http:80:8080", #Pablo
+      "export $(grep -v '^#' /tmp/.env.prod | xargs) && dokku config:set beerapp $(grep -v '^#' /tmp/.env.prod | xargs)",
+      "dokku apps:create beerapp",
+      "dokku ports:add beerapp http:80:8080",
       "dokku domains:remove-global beerapp",
       "dokku domains:remove beerapp beerapp.beerapp",
       "dokku domains:add beerapp ${hcloud_server.web.ipv4_address}",
