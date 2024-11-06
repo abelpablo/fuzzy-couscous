@@ -76,7 +76,7 @@ destination = "/tmp/.env.prod"  # Destination path on the instanc
 # Configure Dokku and set environment variables
   provisioner "remote-exec" {
     inline = [
-      "export $(grep -v '^#' /tmp/.env.prod | xargs) && dokku config:set beerapp $(grep -v '^#' /tmp/.env.prod | xargs)",
+      "export $(grep -v '^#' /tmp/.env | xargs) && dokku config:set beerapp $(grep -v '^#' /tmp/.env | xargs)",
       "dokku apps:create beerapp",
       "dokku ports:add beerapp http:80:8080",
       "dokku domains:remove-global beerapp",
