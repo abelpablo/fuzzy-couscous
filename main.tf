@@ -67,11 +67,11 @@ resource "null_resource" "dokku_install_and_setup_firewall" {
       "ufw reload"          # Reload UFW to apply changes
     ]
   }
-# Upload environment variables file to the instance
-provisioner "file" {
-source      = "./.env.prod"  # Path to your local .env.prod file
-destination = "/tmp/.env.prod"  # Destination path on the instanc
-}
+  # Upload environment variables file to the instance
+  provisioner "file" {
+    source = "./.env"  # Path to your local .env.prod file
+    destination = "/tmp/.env"  # Destination path on the instanc
+  }
 
 # Configure Dokku and set environment variables
   provisioner "remote-exec" {
